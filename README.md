@@ -8,7 +8,7 @@ This component should:
 
 ### Links
 
-- [Solution]()
+- [Solution](https://www.frontendmentor.io/solutions/advice-generator-q0rQHvaQq9)
 - [Live Site](https://fluffy-sorbet-87d302.netlify.app)
 
 ### Built with
