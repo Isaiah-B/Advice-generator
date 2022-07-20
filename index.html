@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+
+</head>
+<body>
+  <main>
+    <div class="center">
+      <div class="container">
+        <h2 class="heading">Advice #<span class="advice-num"></span></h2>
+        <p class="text"></p>
+        <img class="separator" src="images/pattern-divider-desktop.svg" alt="Line separating advice and random advice button">
+        <img class="separator-mobile" src="images/pattern-divider-mobile.svg" alt="Line separating advice and random advice button">
+        <button class="dice">
+          <img src="images/icon-dice.svg" alt="dice icon">
+        </button>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Isaiah-B">Isaiah</a>.
+  </div>
+</body>
+
+<script>
+  const text = document.querySelector('.text');
+  const number = document.querySelector('.advice-num');
+  const diceButton = document.querySelector('.dice');
+
+  async function getData() {
+    const res = await fetch('https://api.adviceslip.com/advice');
+    const data = await res.json();
+    const slip = data.slip;
+    
+    text.innerHTML = '&#8220;' + slip.advice + '&#8221;'
+    number.textContent = slip.id.toString();
+  }
+  
+  getData();
+
+  diceButton.addEventListener('click', () => getData());
+</script>
+</html>
