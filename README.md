@@ -8,8 +8,8 @@ This component should:
 
 ### Links
 
-- Solution: 
-- Live Site:
+- [Solution]()
+- [Live Site](https://fluffy-sorbet-87d302.netlify.app)
 
 ### Built with
 
@@ -20,4 +20,4 @@ This component should:
 
 ## Author
 
-- Frontend Mentor [Isaiah-B](https://www.frontendmentor.io/profile/Isaiah-B)
+- Frontend Mentor [@Isaiah-B](https://www.frontendmentor.io/profile/Isaiah-B)
